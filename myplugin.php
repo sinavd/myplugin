@@ -60,8 +60,11 @@ function handle_logo_upload()
 {
 	if(!empty($_FILES["demo-file"]["tmp_name"]))
 	{
-		$urls = wp_handle_upload($_FILES["logo"], array("test_form" =>
+		$urls = wp_handle_upload($_FILES["logo"], array("test_form" => FALSE));
+		$temp = $urls["url"];
+		return $temp;
 	}
+	return $options;
 }
 
 function sub_theme_settings_page() {}
