@@ -25,10 +25,12 @@ function display_theme_panel_fields()
 	add_settings_field("twitter_url", "Titter Profile Url", "display_twitter_element", "theme-panel", "section");
 	add_settings_field("facebook_url", "Facebook Profile Url", "display_facebook_element", "theme-panel", "section");
 	add_settings_field("theme_layout", "do you want the layout to be responsive?", "display_layout_element", "theme-panel", "section");
+	add_settings_field("logo", "Logo", "logo_display", "theme-panel", "section");
 	
 	register_setting("section", "twitter_url");
 	register_setting("section", "facebook_url");
 	register_setting("section", "theme_layout");
+	register_setting("section", "logo", "handle_logo_upload");
 }
 
 function display_layout_element()
