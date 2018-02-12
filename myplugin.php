@@ -54,7 +54,7 @@ function theme_settings_page()
 
 function logo_display()
 {
-	echo "<input type='file' name='logo' />"
+	echo "<input type='file' name='logo' />";
 	echo get_option('logo');
 }
 
